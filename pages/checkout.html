@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mero Order</title>
+    <!--    linked js-->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <sript src="{% static 'assets/js/extension/choices.js' %}"></sript>
+    <!--    linked css-->
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <div style="position: fixed;top:0;width: 100%;z-index: 1;">
+
+        <div class="s003">
+            <form>
+                <div class="inner-form">
+
+                    <div class="input-field second-wrap">
+                        <input id="search" type="text" placeholder="Enter Product name to Search" />
+                    </div>
+                    <div class="input-field third-wrap">
+                        <button class="btn-search" type="button">
+                            <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                            </svg>
+                        </button>
+
+
+
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <script src="{% static 'assets/js/extension/choices.js' %}"></script>
+        <script>
+            const choices = new Choices('[data-trigger]', {
+                searchEnabled: false,
+                itemSelectText: '',
+            });
+
+        </script>
+
+        <!--navigation bar starts-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand font" href="#">BV LOGO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link font" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fruits.html">Fruits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font" href="vegetables.html">Vegetables</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font" href="about_us.html">About us</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+
+    <!--body starts -->
+
+
+
+    <!--navbar ends -->
+
+    <div class="container index_container">
+
+        <div class="row">
+            <div class="card col-md-7 offset-1">
+                <div class="card-header">
+                    <h3> Grab your product </h3>
+                </div>
+
+                <div class="row" style="margin-top:1%;">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Email Address:</label>
+                            <input type="email" class="form-control" placeholder="Enter your Email Address" name="email" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input type="text" class="form-control" placeholder="Enter your name" name="fullName" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:1%;">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Phone Number:</label>
+                            <input type="tel" class="form-control" placeholder="Enter your Contact Number" name="phoneNumber" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Address:</label>
+                            <input type="text" class="form-control" placeholder="Enter your Address" name="address" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top:1%;">
+                    <div class="col-12">
+                        <div class="form-group create-account checkbox">
+                            <label>Delivery Charge <span style="color:red;">*</span></label>
+                            <div>
+                                <input type="radio" id="deliveryIn" name="deliveryCharge" value="100" checked>
+                                <label for="male"> Inside the ringroad (Rs 100)</label><br>
+                                <input type="radio" id="deliveryOut" name="deliveryCharge" value="150">
+                                <label for="female"> Outside the ringroad (Rs 150)</label><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-md-3" style="margin-left:2%;">
+                <div class="card-header">
+                    <h3 style="text-decoration: underline;text-decoration-color: green;">Total Bill</h3>
+                </div>
+                <div class="row" style="margin-top:1%;">
+                    <div class="card-body">
+                        <ul>
+                            <p>Sub Total: <span style="margin-left:40%;">Rs. 340</span></p>
+                            <p>(+) Delivery Charge: <span style="margin-left:19%;">Rs. 00</span></p>
+                            <hr>
+                            <p>Total: <span style="margin-left:49%;">Rs. 340</span></p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input style="margin-left:10%; padding:2% 30%;" type=button id="checkout" class="btn btn-success" value="Checkout">
+                    </div>
+                    <div class="col-sm-12" style="margin-top:3%;">
+                        <h4 style="margin-left:10%; font-size:18px; color:blue;">Cash on Delivery</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--    footer starts-->
+    <footer>
+        <div class="container-fluid-padding content">
+            <div style="  background-color: #3f3f3f;
+        color:white;" class="row text-center">
+                <div class="col-md-4">
+                    <img src="" alt="" height="55">
+                    <hr class="light">
+                    <p>Phone: **************</p>
+                    <p>Email: ************</p>
+                    <p>****, Nepal</p>
+                </div>
+                <div class="col-md-4">
+
+                    <hr style="background-color: aliceblue;">
+                    Our Services
+                    <hr style="background-color: aliceblue;">
+                    <p>24 hrs services</p>
+                    <p> ***************</p>
+                    <p>Home Delivery</p>
+                </div>
+                <div class="col-md-4">
+
+                    <hr style="background-color: aliceblue;">
+                    Staisfied Customers
+                    <hr style="background-color: aliceblue;">
+                    <p>*********************</p>
+                    <p>**************</p>
+                    <p>**********************</p>
+                </div>
+                <div class="col-12">
+                    <hr style="background-color: aliceblue;">
+                    <h5>&copy;BestValue</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--    footer ends-->
+
+</body>
+<!-- body ends -->
+
+<!-- javascript files | Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</html>
